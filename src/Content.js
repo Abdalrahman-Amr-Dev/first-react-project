@@ -1,17 +1,20 @@
 const Content = () => {
-    const handleNameChange = () => {
-        const names = ['Bob', 'Kevin', 'Dave'];
-        const int = Math.floor(Math.random() * 3);
-        return names[int];
-    }
+  const handleNameChange = () => {
+    const names = ["Bob", "Kevin", "Dave"];
+    const int = Math.floor(Math.random() * 3);
+    return names[int];
+  };
 
-    return (
-        <main>
-            <p>
-                Hello {handleNameChange()}!
-            </p>
-        </main>
-    )
-}
+  const handleClick = () => {
+    console.log("you clicked it ");
+  };
 
-export default Content
+  return (
+    <main>
+      <p>Hello {handleNameChange()}!</p>
+      <button onClick={handleClick}>Click me</button>
+    </main>
+  );
+};
+
+export default Content;
